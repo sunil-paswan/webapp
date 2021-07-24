@@ -1,10 +1,6 @@
 pipeline {
 
-agent {
-    node {
-      label 'localnode_jenkinsagent'
-    }
-  }
+agent any
   
       tools {
         jdk 'jdk1.8'
