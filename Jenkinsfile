@@ -1,12 +1,7 @@
 pipeline {
 
 agent any
-  
-      tools {
-        jdk 'jdk1.8'
-        maven 'mvn3.5.0'
-    }
-    
+     
     stages {
         
      stage('Maven version') {
