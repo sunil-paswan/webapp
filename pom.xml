@@ -18,4 +18,11 @@
   <build>
     <finalName>WebApp</finalName>
   </build>
+  <distributionManagement>
+<snapshotRepository>
+  <id>sunil-cicd</id>
+  <name>sunil-cicd</name>
+  <url>http://13.126.65.117:8081/repository/sunil-cicd/</url>
+  </snapshotRepository>
+  </distributionManagement>
 </project>
