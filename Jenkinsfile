@@ -28,15 +28,7 @@ agent any
     }
   }
 }
-      
-      stage("Quality Gate") {
-        steps {
-        
-           
-              waitForQualityGate abortPipeline: true
      
-        }
-      }
         
         stage('Stage 1') {
             steps {
