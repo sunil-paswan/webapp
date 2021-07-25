@@ -46,8 +46,8 @@ agent any
         
         stage('Deploy') {
             steps {
-                 sh ' echo  deploying'
-                //sh 'mvn deploy'
+                // sh ' echo  deploying'
+                sh 'mvn deploy'
             }
             
         }           
