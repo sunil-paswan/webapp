@@ -46,7 +46,7 @@ agent any
         
         stage('Deploy') {
             steps {
-                // sh
+                
                 sh 'mvn deploy'
             }
             
