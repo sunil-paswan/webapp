@@ -3,17 +3,8 @@ pipeline {
 agent any
      
     stages {
-        
-     stage('Maven version') {
-            steps {
-                echo "Hello, Maven"
-                sh "mvn --version" 
-            }
-        }
-      
-      
-      
-      stage('SonarCloud') {
+         
+      stage('SonarCloud_static_code_analysis') {
   environment {
     SCANNER_HOME = tool 'Sonar'
     ORGANIZATION = "demo1_maven_freestyle"
@@ -38,26 +29,24 @@ agent any
       }
      
         
-        stage('Stage 1') {
+        stage('Code_testing') {
             steps {
-                sh 'mvn clean package'
+                sh 'mvn test'
             }
             
         }
         
-        stage('Stage 2') {
+        stage('Build') {
             steps {
-                echo 'Stage2 Hello world!'  
-                echo  'Stage2 $date'
+                sh 'mvn install'
             }
             
         }
         
         
-        stage('Stage 3') {
+        stage('Deploy') {
             steps {
-                echo 'Wel come to Stage3 '  
-                echo  'Stage3 '
+                //sh 'mvn deploy'
             }
             
         }           
